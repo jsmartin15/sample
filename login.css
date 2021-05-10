@@ -1,0 +1,191 @@
+       /*---------------- 
+       google font import 
+       ------------------*/
+       
+       @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap');
+       /*----------------
+       color theme
+       ------------------*/
+       
+        :root {
+           --color-0: #56639e;
+           --color-100: #975908;
+           --color-200: #5f3805;
+       }
+       /*------------------
+       global styles
+       ------------------*/
+       
+       * {
+           margin: 0;
+           padding: 0;
+           box-sizing: border-box;
+           font-family: 'Playfair Display', serif;
+       }
+       
+       .pointer {
+           cursor: pointer;
+       }
+       /*------------------
+       section styles
+       --------------------*/
+       
+       section {
+           position: relative;
+           width: 100%;
+           height: 100vh;
+           display: flex;
+       }
+       /*-------------------
+       image box styles
+       ---------------------*/
+       
+       section .img-box {
+           position: relative;
+           width: 50%;
+           height: 100%;
+       }
+       
+       section .img-box img {
+           position: absolute;
+           top: 0;
+           left: 0;
+           width: 100%;
+           height: 100%;
+           object-fit: cover;
+       }
+       /*-------------------
+       content box styles
+       ---------------------*/
+       
+       section .content-box {
+           display: flex;
+           width: 50%;
+           height: 100%;
+           justify-content: center;
+           align-items: center;
+       }
+       /*-------------------
+       form box styles
+       ---------------------*/
+       
+       section .content-box .form-box {
+           width: 50%;
+       }
+       
+       section .content-box .form-box h2 {
+           color: var(--color-0);
+           font-weight: 600;
+           font-size: 2.0em;
+           text-transform: uppercase;
+           margin-bottom: 20px;
+           border-bottom: 4px solid var(--color-100);
+           display: inline-block;
+           letter-spacing: 2px;
+       }
+       
+       section .content-box .form-box .input-box {
+           margin-bottom: 20px;
+       }
+       
+       section .content-box .form-box .input-box span {
+           margin-bottom: 5px;
+           display: inline-block;
+           color: var(--color-0);
+           font-size: 20px;
+           font-weight: 300;
+           letter-spacing: 2px;
+       }
+       
+       section .content-box .form-box .input-box input {
+           width: 100%;
+           padding: 10px 20px;
+           border: 1px solid var(--color-0);
+           border-radius: 35px;
+           font-weight: 600;
+           font-size: 16px;
+           letter-spacing: 2px;
+           color: var(--color-black-0);
+           background: transparent;
+       }
+       
+       section .content-box .form-box .input-box input[type="submit"] {
+           background: var(--color-100);
+           color: #fff;
+           outline: none;
+           border: none;
+           font-weight: 500;
+       }
+       
+       section .content-box .form-box .input-box input[type="submit"]:hover {
+           background: var(--color-200);
+       }
+       
+       section .content-box .form-box .remember {
+           margin-bottom: 10px;
+           display: inline-table;
+           font-size: 14px;
+           font-weight: 300;
+           color: var(--color-0);
+       }
+       
+       section .content-box .form-box .input-box p {
+           color: var(--color-0);
+       }
+       
+       section .content-box .form-box .input-box a {
+           color: var(--color-100);
+           font-size: 20px;
+           font-weight: 600;
+       }
+       
+       section .content-box .form-box .input-box a:hover {
+           color: var(--color-200);
+       }
+       
+       section .content-box .form-box h3 {
+           color: var(--color-0);
+           text-align: center;
+           font-weight: 500;
+           margin: 80px 0 10px;
+       }
+       
+       section .content-box .form-box .git {
+           display: flex;
+           justify-content: center;
+       }
+       
+       section .content-box .form-box .git img {
+           height: 50px;
+           width: 50px;
+           cursor: pointer;
+       }
+       /*-------------------
+       media view styles
+       ---------------------*/
+       
+       @media(max-width: 768px) {
+           section .img-box {
+               position: absolute;
+               top: 0;
+               left: 0;
+               width: 100%;
+               height: 100%;
+           }
+           section .content-box {
+               display: flex;
+               justify-content: center;
+               width: 100%;
+               height: 100%;
+               z-index: 1;
+           }
+           section .content-box .form-box {
+               background: rgb(255 255 255 / 0.8);
+               width: 100%;
+               padding: 40px;
+               margin: 50px;
+           }
+           section .content-box .form-box .git img {
+               border-radius: 100%;
+           }
+       }
